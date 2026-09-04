@@ -1,0 +1,57 @@
+# Environment
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite3
+
+# Docker
+postgres_data/
+redis_data/
+
+# Node (frontend)
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+logs/
+
+# Trading data (may be large)
+data/cache/
+data/historical/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+.coverage
+htmlcov/
+.pytest_cache/
+
+# MyPy
+.mypy_cache/

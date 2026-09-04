@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0F19;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-primary: #4338CA;
+  --color-primary-light: #6366F1;
+  --color-accent: #38BDF8;
+  --color-buy: #10B981;
+  --color-buy-dim: rgba(16, 185, 129, 0.2);
+  --color-sell: #EF4444;
+  --color-sell-dim: rgba(239, 68, 68, 0.2);
+  --color-muted: #94A3B8;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --shadow-glow-buy: 0 0 15px rgba(16, 185, 129, 0.3);
+  --shadow-glow-sell: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: #f1f5f9;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface backdrop-blur-md border border-border rounded-xl shadow-glass;
+  }
+  
+  .glass-button {
+    @apply relative overflow-hidden bg-surface hover:bg-surface-hover border border-border rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-accent;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
